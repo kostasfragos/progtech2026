@@ -34,15 +34,15 @@ rational rational::mul(rational r) {
 rational rational::div(rational r) {
     int new_nom = nom * r.den;
     int new_den = den * r.nom;
-
+    
     return rational(new_nom, new_den);
+    
 }
 
 void rational::print() {
     cout << nom/gcd(nom, den);
     if (den != 1)
         cout << "/" << den/gcd(nom, den);
-    cout << endl;
 }
 
 int rational::gcd(int a, int b) {
