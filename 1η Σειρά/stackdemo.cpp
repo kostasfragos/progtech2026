@@ -50,8 +50,12 @@ public:
     }
 
     friend ostream& operator<<(ostream &out, const stack &s) {
-        for (int i = s.count-1; i >= 0; --i)
-            out << s.data[i] << " ";
+        out << "[";
+        for (int i = 0; i < s.count-1; ++i)
+            out << s.data[i] << ", ";
+        if (s.count >= 1) 
+            out << s.data[s.count-1];
+        out << "]";
         return out;
     }
 
