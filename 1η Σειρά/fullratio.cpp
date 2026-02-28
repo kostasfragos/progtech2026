@@ -38,7 +38,7 @@ rational operator/(const rational &x, const rational &y) {
     return rational(new_nom, new_den);
 }
 
-ostream &operator<<(ostream &out, const rational &x) {
+ostream& operator<<(ostream &out, const rational &x) {
     out << x.nom/rational::gcd(x.nom, x.den);
     if (x.den != 1)
         out << "/" << x.den/rational::gcd(x.nom, x.den);
